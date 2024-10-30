@@ -33,3 +33,7 @@ HOW TO USE:
 
 	To access the shell of a container:
 		docker exec -it <container-name> /bin/bash
+
+
+ALSO:
+	Make sure you're not running anything on port 80, since the frontend container binds 	     to the host's (your) http port in order to show you the web interface.

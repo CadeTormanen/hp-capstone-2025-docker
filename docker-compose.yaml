@@ -30,8 +30,6 @@ services:
     networks:
       capstone:
         ipv4_address: "192.168.0.202"
-    ports: 
-      - "27017:27017"
     extra_hosts:
       - "wsuv-hp-capstone.com:192.168.0.101"
       - "api.wsuv-hp-capstone.com:192.168.0.201"
