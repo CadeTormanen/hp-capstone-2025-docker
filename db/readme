@@ -1,0 +1,1 @@
+this folder mounts inside the database container. It will store Mongo's data as it populates.
