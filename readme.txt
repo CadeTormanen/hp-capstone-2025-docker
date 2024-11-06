@@ -1,7 +1,7 @@
 PREREQUISTES:
 	-docker
 	-docker-compose
-	-Linux (maybe, only because I haven't tested docker on Bill Microsoft or Mac yet)
+	-Linux (maybe, only because I haven't tested docker on Windows or Mac yet)
 
 INFO:
 
