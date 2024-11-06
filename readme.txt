@@ -1,7 +1,7 @@
 PREREQUISTES:
 	-docker
 	-docker-compose
-	-Linux (maybe, only because I haven't tested docker on Windows or Mac yet)
+	-Linux (maybe, only because I haven't tested docker on Windows or Mac yet. Mac is more likely to work.)
 
 INFO:
 
@@ -13,6 +13,15 @@ INFO:
 
 	backend, frontend, and database are daemons, and should always be running.
 	vue simply builds the vue project, and stops.
+
+GETTING STARTED:
+	0. Install docker and docker-compose on your computer.
+	1. Clone this repository to your local computer (if you haven't already)
+	2. Remove the readme files from frontend-src and backend-src
+	3. Clone the frontend and backend code into frontend-src and backend-src, respectively.
+	4. Ensure you are not running any web servers on port 80 on your local computer (since the frontend Docker container will need it)
+	5. execute "sudo docker-compose up" in the root of the Docker repo (same directory as the docker-compose YAML file)
+	6. wait just a few seconds. If successful, logs should show non-error messages for all four images.
 
 
 HOW TO USE:
@@ -34,6 +43,3 @@ HOW TO USE:
 	To access the shell of a container:
 		docker exec -it <container-name> /bin/bash
 
-
-ALSO:
-	Make sure you're not running anything on port 80, since the frontend container binds 	     to the host's (your) http port in order to show you the web interface.
