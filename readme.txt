@@ -40,6 +40,8 @@ HOW TO USE:
 	To start a specific container:
 		docker-compose up -d <container-name>
 
+NOTE: DNS resolution for frontend code is done by your browser. This means you either need to change all frontend api call IP addresses to 192.168.0.201, or set api.wsuv-hp-capstone.com to resolve to 192.168.0.201 in your hosts file. This is unfortunate but I haven't found a good way around this yet.
+
 	To access the shell of a container:
 		docker exec -it <container-name> /bin/bash
 
