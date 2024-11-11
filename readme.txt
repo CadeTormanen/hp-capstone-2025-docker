@@ -7,41 +7,34 @@ INFO:
 
 	There are four containers.
 		backend -> runs backend-src folder code with node.js
-		frontend -> runs the nginx web server, accessing the contents of frontend-src
-		vue -> builds the vue project after changes have been made
+		vue -> builds and hosts the vue project
 		database -> runs MongoDB, reading/writing to the ./db folder
 
-	backend, frontend, and database are daemons, and should always be running.
-	vue simply builds the vue project, and stops.
+	Both Vue (frontend) and backend will automatically update when you make code changes.
 
 GETTING STARTED:
 	0. Install docker and docker-compose on your computer.
-	1. Clone this repository to your local computer (if you haven't already)
-	2. Remove the readme files from frontend-src and backend-src
+	1. Clone this repository to your computer (if you haven't already)
+	2. Remove the readme files from the db, frontend-src, backend-src
 	3. Clone the frontend and backend code into frontend-src and backend-src, respectively.
 	4. Ensure you are not running any web servers on port 80 on your local computer (since the frontend Docker container will need it)
-	5. execute "sudo docker-compose up" in the root of the Docker repo (same directory as the docker-compose YAML file)
-	6. wait just a few seconds. If successful, logs should show non-error messages for all four images.
+	5. Execute run.sh
+
+	*you will likely need sudo priviledges 
 
 
-HOW TO USE:
-
-	To start entire stack:
-		docker-compose up -d
-		
-		this starts all four containers
-
-	To bring down entire stack:
-		docker-compose down
-
+DOCKER INFO:
 	To see which docker containers are running, and their names:
 		docker ps
 
-	To start a specific container:
-		docker-compose up -d <container-name>
-
-NOTE: DNS resolution for frontend code is done by your browser. This means you either need to change all frontend api call IP addresses to 192.168.0.201, or set api.wsuv-hp-capstone.com to resolve to 192.168.0.201 in your hosts file. This is unfortunate but I haven't found a good way around this yet.
-
 	To access the shell of a container:
 		docker exec -it <container-name> /bin/bash
+
+OTHER INFO :
+DNS resolution for frontend code is done by your browser.
+This means you either need to:
+	1. change all frontend api call IP addresses to 192.168.0.201
+	2. set api.wsuv-hp-capstone.com to resolve to 192.168.0.201 in your hosts file.
+This is unfortunate but I haven't found a good way around this yet.
+
 
