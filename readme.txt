@@ -35,8 +35,8 @@ OTHER INFO :
 DNS resolution for frontend code is done by your browser/computer.
 The frontend uses DNS to find the backend server and make API calls.
 This means you either need to:
-	1. change all frontend api call IP addresses to 192.168.0.201 while testing.
-	2. set api.wsuv-hp-capstone.com to resolve to 192.168.0.201 in your hosts file while testing.
+	1. change all frontend api call IP addresses to 192.168.97.201 while testing.
+	2. set api.wsuv-hp-capstone.com to resolve to 192.168.97.201 in your hosts file while testing.
 This is unfortunate but I haven't found a good way around this yet :)
 
 
