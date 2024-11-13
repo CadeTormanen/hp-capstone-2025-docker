@@ -5,8 +5,8 @@ PREREQUISTES:
 
 INFO:
 
-	There are four containers.
-		backend -> runs backend-src folder code with node.js
+	There are three containers.
+		backend -> hosts backend-src folder code with node.js
 		vue -> builds and hosts the vue project
 		database -> runs MongoDB, reading/writing to the ./db folder
 
@@ -17,10 +17,11 @@ GETTING STARTED:
 	1. Clone this repository to your computer (if you haven't already)
 	2. Remove the readme files from the db, frontend-src, backend-src
 	3. Clone the frontend and backend code into frontend-src and backend-src, respectively.
-	4. Ensure you are not running any web servers on port 80 on your local computer (since the frontend Docker container will need it)
+	4. Ensure you are not running any web servers on port 80 on your local computer (since the frontend Docker container will need port 80)
 	5. Execute run.sh
+	6. see the "Other Info" section for details on DNS
 
-	*you will likely need sudo priviledges 
+	*you will likely need sudo privileges 
 
 
 DOCKER INFO:
@@ -31,10 +32,11 @@ DOCKER INFO:
 		docker exec -it <container-name> /bin/bash
 
 OTHER INFO :
-DNS resolution for frontend code is done by your browser.
+DNS resolution for frontend code is done by your browser/computer.
+The frontend uses DNS to find the backend server and make API calls.
 This means you either need to:
-	1. change all frontend api call IP addresses to 192.168.0.201
-	2. set api.wsuv-hp-capstone.com to resolve to 192.168.0.201 in your hosts file.
-This is unfortunate but I haven't found a good way around this yet.
+	1. change all frontend api call IP addresses to 192.168.0.201 while testing.
+	2. set api.wsuv-hp-capstone.com to resolve to 192.168.0.201 in your hosts file while testing.
+This is unfortunate but I haven't found a good way around this yet :)
 
 
