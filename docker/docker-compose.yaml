@@ -17,7 +17,7 @@ services:
     ports:
       - 80:80
   backend:
-    image: backend:latest
+    image: node:latest
     volumes:
       - ../backend-src:/home/src
     working_dir: /home/src 
