@@ -17,15 +17,13 @@ services:
     ports:
       - 80:80
   backend:
-    image: node:latest
+    image: rust:1.75-slim
     volumes:
       - ../backend-src:/home/src
     working_dir: /home/src 
     command: >
-      bash -c "npm update &&
-               npm install -g nodemon &&
-               npm install &&
-               nodemon server.js"
+      sh -c "cargo update &&
+             cargo run"
     networks:
       capstone:
         ipv4_address: "${IP_BACKEND}"

@@ -1,11 +1,12 @@
 #!/bin/bash
 
+echo "Setting up containers ... this may take a few minutes. Please stand by."
+
 docker-compose -f './docker/docker-compose.yaml' down
 docker-compose -f './docker/docker-compose.yaml' up -d
 
-echo "Setting up containers ... this may take a few minutes. Please stand by."
-./scripts/wait-for-frontend.sh
-./scripts/wait-for-backend.sh
+#./scripts/wait-for-frontend.sh
+#./scripts/wait-for-backend.sh
 echo ""
 echo "-------------------------------"
 echo "Setup Complete."
